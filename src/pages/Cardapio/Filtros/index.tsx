@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import styles from "./Filtros.module.scss";
-import filtros from "./filtros.json";
+import classNames from 'classnames';
+import styles from './Filtros.module.scss';
+import filtros from './filtros.json';
 
 type IOpcao = typeof filtros[0];
 
@@ -14,7 +14,7 @@ const Filtros = ({ filtro, setFiltro }: Props) => {
   const selecionarFiltro = (opcao: IOpcao) => {
     if (filtro === opcao.id) return setFiltro(null);
     return setFiltro(opcao.id);
-  }
+  };
 
   return (
     <div className={styles.filtros}>
@@ -32,7 +32,7 @@ const Filtros = ({ filtro, setFiltro }: Props) => {
         </button>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export default Filtros;
